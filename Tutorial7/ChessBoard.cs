@@ -28,6 +28,7 @@ namespace Tutorial7
             board.Remove(from);
             board.Remove(to);
             board.Add(to, pFrom);
+            pFrom.moved();
         }
 
         public Tuple<char, int> getLocation(Pawn p)
