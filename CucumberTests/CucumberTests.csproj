@@ -74,6 +74,12 @@
     <Compile Include="PawnMovementSteps.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WhiteMoveForward.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WhiteMoveForward.feature</DependentUpon>
+    </Compile>
+    <Compile Include="WhiteMoveForwardSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Tutorial7\Tutorial7.csproj">
@@ -95,6 +101,10 @@
     <None Include="PawnMovement.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PawnMovement.feature.cs</LastGenOutput>
+    </None>
+    <None Include="WhiteMoveForward.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>WhiteMoveForward.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <Choose>
