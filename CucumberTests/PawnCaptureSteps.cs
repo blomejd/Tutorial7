@@ -15,7 +15,7 @@ namespace CucumberTests
         }
         Pawn blackPawn = null;
         [Given(@"I have a black pawn at (.)(.)")]
-        public void GivenIHaveABlackPawnAtE(char x, int y)
+        public void GivenIHaveABlackPawnAt(char x, int y)
         {
             blackPawn = new Pawn("black");
             moveSteps.board.placePiece(blackPawn, new Tuple<char, int>(x, y));
