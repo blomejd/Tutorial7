@@ -1,1 +1,6 @@
 c:\users\blomejd\documents\visual studio 2015\Projects\Tutorial7\Tutorial7\bin\Debug\Tutorial7.exe.config
+C:\Users\blomejd\Documents\Visual Studio 2015\Projects\Tutorial7\Tutorial7\bin\Debug\Tutorial7.exe
+C:\Users\blomejd\Documents\Visual Studio 2015\Projects\Tutorial7\Tutorial7\bin\Debug\Tutorial7.pdb
+C:\Users\blomejd\Documents\Visual Studio 2015\Projects\Tutorial7\Tutorial7\obj\Debug\Tutorial7.csprojResolveAssemblyReference.cache
+C:\Users\blomejd\Documents\Visual Studio 2015\Projects\Tutorial7\Tutorial7\obj\Debug\Tutorial7.exe
+C:\Users\blomejd\Documents\Visual Studio 2015\Projects\Tutorial7\Tutorial7\obj\Debug\Tutorial7.pdb
