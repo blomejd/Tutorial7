@@ -8,7 +8,7 @@ namespace CucumberTests
     [Binding]
     public class PawnMovementSteps
     {
-        ChessBoard board = null;
+        public ChessBoard board = null;
         [Given(@"that I have an empty chessboard")]
         public void GivenThatIHaveAnEmptyChessboard()
         {

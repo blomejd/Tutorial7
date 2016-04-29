@@ -54,6 +54,12 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="PawnCapture.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PawnCapture.feature</DependentUpon>
+    </Compile>
+    <Compile Include="PawnCaptureSteps.cs" />
     <Compile Include="PawnMovement.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -72,6 +78,10 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="PawnCapture.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PawnCapture.feature.cs</LastGenOutput>
+    </None>
     <None Include="PawnMovement.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PawnMovement.feature.cs</LastGenOutput>
