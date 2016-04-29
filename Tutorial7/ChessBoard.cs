@@ -21,10 +21,13 @@ namespace Tutorial7
 
         public void movePiece(Tuple<char, int> from, Tuple<char, int> to)
         {
-            Pawn p;
-            board.TryGetValue(from, out p);
+            Pawn pFrom;
+            Pawn pTo;
+            board.TryGetValue(from, out pFrom);
+            
             board.Remove(from);
-            board.Add(to, p);
+            board.Remove(to);
+            board.Add(to, pFrom);
         }
 
         public Tuple<char, int> getLocation(Pawn p)

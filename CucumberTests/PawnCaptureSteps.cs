@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using TechTalk.SpecFlow;
 using Tutorial7;
 
@@ -23,7 +24,7 @@ namespace CucumberTests
         [Then(@"the black pawn is captured")]
         public void ThenTheBlackPawnIsCaptured()
         {
-            Assert.isTrue(blackPawn.isCaptured());
+            Assert.IsTrue(blackPawn.isCaptured());
         }
     }
 }

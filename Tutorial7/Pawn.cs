@@ -13,5 +13,10 @@ namespace Tutorial7
         {
             this.color = color;
         }
+
+        public bool isCaptured()
+        {
+            return true;
+        }
     }
 }
