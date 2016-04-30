@@ -66,6 +66,11 @@
       <DependentUpon>InitialMoveTwo.feature</DependentUpon>
     </Compile>
     <Compile Include="InitialMoveTwoSteps.cs" />
+    <Compile Include="MoveOneSpaceOntoPiece.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MoveOneSpaceOntoPiece.feature</DependentUpon>
+    </Compile>
     <Compile Include="MoveThroughPieces.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -119,6 +124,10 @@
     <None Include="InitialMoveTwo.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>InitialMoveTwo.feature.cs</LastGenOutput>
+    </None>
+    <None Include="MoveOneSpaceOntoPiece.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>MoveOneSpaceOntoPiece.feature.cs</LastGenOutput>
     </None>
     <None Include="MoveThroughPieces.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
