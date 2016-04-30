@@ -71,6 +71,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MoveThroughPieces.feature</DependentUpon>
     </Compile>
+    <Compile Include="OnlyCaptureDiagonally.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OnlyCaptureDiagonally.feature</DependentUpon>
+    </Compile>
+    <Compile Include="OnlyCaptureDiagonallySteps.cs" />
     <Compile Include="OnlyMoveOneAfterInitialMove.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -117,6 +123,10 @@
     <None Include="MoveThroughPieces.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>MoveThroughPieces.feature.cs</LastGenOutput>
+    </None>
+    <None Include="OnlyCaptureDiagonally.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>OnlyCaptureDiagonally.feature.cs</LastGenOutput>
     </None>
     <None Include="OnlyMoveOneAfterInitialMove.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
