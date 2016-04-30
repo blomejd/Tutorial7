@@ -8,16 +8,18 @@ namespace CucumberTests
     [Binding]
     public class BlackMovesForwardSteps
     {
-        ChessBoard board;
+        PawnMovementSteps moveSteps;
+        public BlackMovesForwardSteps(PawnMovementSteps p)
+        {
+            moveSteps = p;
+        }
         Pawn p;
         [When(@"I try to move the black pawn from (.)(.) to (.)(.)")]
         public void WhenITryToMoveTheBlackPawnFromTo(char x1, int y1, char x2, int y2)
         {
-            Tuple<char, int> init = new Tuple<char, int>('a', 7);
-            board = new ChessBoard();
+            Tuple<char, int> init = new Tuple<char, int>(x1, y1);
             p = new Pawn("black");
-            board.placePiece(p, init);
-            board.movePiece(init, new Tuple<char, int>('a', 8));
+            moveSteps.board.movePiece(init, new Tuple<char, int>(x2, y2));
         }
         
         [Then(@"the black pawn will not move")]

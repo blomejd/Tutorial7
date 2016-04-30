@@ -65,6 +65,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CaptureInPassing.feature</DependentUpon>
     </Compile>
+    <Compile Include="CaptureInPassingBlack.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CaptureInPassingBlack.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CaptureInPassingBlackSteps.cs" />
     <Compile Include="CaptureInPassingSteps.cs" />
     <Compile Include="InitialMoveTwo.feature.cs">
       <AutoGen>True</AutoGen>
@@ -135,6 +141,10 @@
     <None Include="CaptureInPassing.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CaptureInPassing.feature.cs</LastGenOutput>
+    </None>
+    <None Include="CaptureInPassingBlack.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CaptureInPassingBlack.feature.cs</LastGenOutput>
     </None>
     <None Include="InitialMoveTwo.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
