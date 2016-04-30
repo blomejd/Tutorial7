@@ -84,7 +84,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 8
  testRunner.And("I have a white pawn at a2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
- testRunner.And("I have a white pawn at a3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have a black pawn at a3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
  testRunner.When("I try to move the white pawn from a2 to a4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11

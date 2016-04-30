@@ -55,9 +55,15 @@ namespace Tutorial7
                     return;
                 }
             }
-            if (verticalDist == forward2 && pFrom.hasMoved())
+            if (verticalDist == forward2)
             {
-                return;
+                if (pFrom.hasMoved())
+                {
+                    return;
+                } else if (board.Keys.Contains(new Tuple<char, int>(from.Item1, from.Item2 + forward1)))
+                {
+                    return;
+                }
             }
 
             board.Remove(from);
