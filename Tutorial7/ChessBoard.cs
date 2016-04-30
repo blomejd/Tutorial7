@@ -37,22 +37,27 @@ namespace Tutorial7
                 forward1 = 1;
                 forward2 = 2;
             }
-
+            int verticalDist = to.Item2 - from.Item2;
+            int horizontalDist = (int)from.Item1 - (int)to.Item1;
             // Move is not within one or two spaces
-            if (to.Item2 - from.Item2 > forward2 || to.Item2 - from.Item2 < forward1)
+            if (verticalDist > forward2 || verticalDist < forward1)
             {
                 return;
             }
             else if (!from.Item1.Equals(to.Item1)) // Same column
             {
-                if (Math.Abs((int)from.Item1 - (int)to.Item1) > 1)
+                if (Math.Abs(horizontalDist) > 1)
                 {
                     return;
                 }
-                else if (to.Item2 - from.Item2 != forward1)
+                else if (verticalDist != forward1)
                 {
                     return;
                 }
+            }
+            if (verticalDist == forward2 && pFrom.hasMoved())
+            {
+                return;
             }
 
             board.Remove(from);
