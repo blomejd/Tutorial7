@@ -44,36 +44,45 @@ namespace Tutorial7
             int horizontalDist = (int)from.Item1 - (int)to.Item1;
             // Move is not within one or two spaces
             if (verticalDist > forward2 || verticalDist < forward1)
-            {
+            { // Attempted move is more than 2, or less than 1 forward
                 return;
-            }
-            else if (!from.Item1.Equals(to.Item1)) // Same column
+            } // Attempted move is 1 or 2 spaces forward
+            else if (!from.Item1.Equals(to.Item1)) // Attempted move is not in same column
             {
                 if (Math.Abs(horizontalDist) > 1)
-                {
+                {// Attempted move is more than 1 column away
                     return;
                 }
                 else if (verticalDist != forward1)
-                {
+                {// Attempted move is not 1 space forward
                     return;
                 }
                 else {
                     Pawn toPawn;
                     board.TryGetValue(to, out toPawn);
                     if (toPawn == null || !toPawn.color.Equals(otherColor))
-                    {
+                    {// Either no pawn at target space or a pawn of own color
                         return;
                     }
                 }
-            }
+            } // Attempted move is in a different column
             if (verticalDist == forward2)
             {
                 if (pFrom.hasMoved())
-                {
+                {// Pawn has already moved
                     return;
                 } else if (board.Keys.Contains(new Tuple<char, int>(from.Item1, from.Item2 + forward1)))
-                {
+                {// Space 1 in front is occupied
                     return;
+                }
+            } else
+            { // Attempted move is one forward
+                if (horizontalDist == 0)
+                {
+                    if (board.Keys.Contains(to))
+                    {
+                        return;
+                    }
                 }
             }
 
