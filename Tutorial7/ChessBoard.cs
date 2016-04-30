@@ -9,9 +9,11 @@ namespace Tutorial7
     public class ChessBoard
     {
         Dictionary<Tuple<char, int>, Pawn> board;
+        public Tuple<char, int> passedSquare;
         public ChessBoard()
         {
             board = new Dictionary<Tuple<char, int>, Pawn>();
+            passedSquare = null;
         }
 
         public void placePiece(Pawn p, Tuple<char, int> loc)
@@ -43,7 +45,7 @@ namespace Tutorial7
             int verticalDist = to.Item2 - from.Item2;
             int horizontalDist = (int)from.Item1 - (int)to.Item1;
             // Move is not within one or two spaces
-            if (verticalDist > forward2 || verticalDist < forward1)
+            if (!(verticalDist == forward1 || verticalDist == forward2))
             { // Attempted move is more than 2, or less than 1 forward
                 return;
             } // Attempted move is 1 or 2 spaces forward
@@ -62,7 +64,10 @@ namespace Tutorial7
                     board.TryGetValue(to, out toPawn);
                     if (toPawn == null || !toPawn.color.Equals(otherColor))
                     {// Either no pawn at target space or a pawn of own color
-                        return;
+                        if (!to.Equals(passedSquare))
+                        {
+                            return;
+                        }
                     }
                 }
             } // Attempted move is in a different column
@@ -92,6 +97,13 @@ namespace Tutorial7
             board.Remove(to);
             board.Add(to, pFrom);
             pFrom.moved();
+            if (verticalDist == forward2)
+            {
+                passedSquare = new Tuple<char, int>(from.Item1, from.Item2 + forward1);
+            } else
+            {
+                passedSquare = null;
+            }
         }
 
         public Pawn GetPieceAt(char x, int y)
