@@ -74,6 +74,8 @@ namespace Tutorial7
                 } else if (board.Keys.Contains(new Tuple<char, int>(from.Item1, from.Item2 + forward1)))
                 {// Space 1 in front is occupied
                     return;
+                } else if (board.Keys.Contains(new Tuple<char, int>(from.Item1, from.Item2 + forward2))) {
+                    return;
                 }
             } else
             { // Attempted move is one forward
