@@ -18,19 +18,19 @@ namespace CucumberTests
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class MoveOneSpaceOntoPieceFeature
+    public partial class MoveTwoSpacesOntoPieceFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "MoveOneSpaceOntoPiece.feature"
+#line 1 "MoveTwoSpacesOntoPiece.feature"
 #line hidden
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "MoveOneSpaceOntoPiece", "\tAs a player,\r\n\tI cannot move a pawn one space forward onto another piece", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "MoveTwoSpacesOntoPiece", "\tAs a player,\r\n\tI cannot move a pawn two spaces forward onto another piece", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -45,9 +45,9 @@ namespace CucumberTests
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "MoveOneSpaceOntoPiece")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "MoveTwoSpacesOntoPiece")))
             {
-                CucumberTests.MoveOneSpaceOntoPieceFeature.FeatureSetup(null);
+                CucumberTests.MoveTwoSpacesOntoPieceFeature.FeatureSetup(null);
             }
         }
         
@@ -68,12 +68,12 @@ namespace CucumberTests
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Move one space onto piece")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MoveOneSpaceOntoPiece")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Move two spaces onto piece")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "MoveTwoSpacesOntoPiece")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
-        public virtual void MoveOneSpaceOntoPiece()
+        public virtual void MoveTwoSpacesOntoPiece()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Move one space onto piece", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Move two spaces onto piece", new string[] {
                         "mytag"});
 #line 6
 this.ScenarioSetup(scenarioInfo);
@@ -82,9 +82,9 @@ this.ScenarioSetup(scenarioInfo);
 #line 8
  testRunner.And("I have a white pawn at a2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
- testRunner.And("I have a black pawn at a3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have a black pawn at a4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
- testRunner.When("I try to move the white pawn from a2 to a3", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I try to move the white pawn from a2 to a4", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
  testRunner.Then("the white pawn is placed in a2", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

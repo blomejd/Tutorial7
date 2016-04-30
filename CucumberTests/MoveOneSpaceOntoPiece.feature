@@ -3,7 +3,7 @@
 	I cannot move a pawn one space forward onto another piece
 
 @mytag
-Scenario: Add two numbers
+Scenario: Move one space onto piece
 	Given that I have an empty chessboard
 	And I have a white pawn at a2
 	And I have a black pawn at a3
