@@ -66,6 +66,12 @@
       <DependentUpon>InitialMoveTwo.feature</DependentUpon>
     </Compile>
     <Compile Include="InitialMoveTwoSteps.cs" />
+    <Compile Include="OnlyMoveOneAfterInitialMove.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OnlyMoveOneAfterInitialMove.feature</DependentUpon>
+    </Compile>
+    <Compile Include="OnlyMoveOneAfterInitialMoveSteps.cs" />
     <Compile Include="PawnCapture.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -102,6 +108,10 @@
     <None Include="InitialMoveTwo.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>InitialMoveTwo.feature.cs</LastGenOutput>
+    </None>
+    <None Include="OnlyMoveOneAfterInitialMove.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>OnlyMoveOneAfterInitialMove.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="PawnCapture.feature">
