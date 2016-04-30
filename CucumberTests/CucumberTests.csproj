@@ -54,6 +54,12 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="BlackMovesForward.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BlackMovesForward.feature</DependentUpon>
+    </Compile>
+    <Compile Include="BlackMovesForwardSteps.cs" />
     <Compile Include="InitialMoveTwo.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -89,6 +95,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="BlackMovesForward.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BlackMovesForward.feature.cs</LastGenOutput>
+    </None>
     <None Include="InitialMoveTwo.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>InitialMoveTwo.feature.cs</LastGenOutput>
