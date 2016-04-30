@@ -23,6 +23,7 @@ namespace Tutorial7
         {
             int forward1 = 1;
             int forward2 = 2;
+            string otherColor;
             Pawn pFrom;
             board.TryGetValue(from, out pFrom);
             if (pFrom == null)
@@ -32,10 +33,12 @@ namespace Tutorial7
             {
                 forward1 = -1;
                 forward2 = -2;
+                otherColor = "white";
             } else // It is white
             {
                 forward1 = 1;
                 forward2 = 2;
+                otherColor = "black";
             }
             int verticalDist = to.Item2 - from.Item2;
             int horizontalDist = (int)from.Item1 - (int)to.Item1;
@@ -54,6 +57,14 @@ namespace Tutorial7
                 {
                     return;
                 }
+                else {
+                    Pawn toPawn;
+                    board.TryGetValue(to, out toPawn);
+                    if (toPawn == null || !toPawn.color.Equals(otherColor))
+                    {
+                        return;
+                    }
+                }
             }
             if (verticalDist == forward2)
             {
@@ -70,6 +81,13 @@ namespace Tutorial7
             board.Remove(to);
             board.Add(to, pFrom);
             pFrom.moved();
+        }
+
+        public Pawn GetPieceAt(char x, int y)
+        {
+            Pawn p = null;
+            board.TryGetValue(new Tuple<char, int>(x, y), out p);
+            return p;
         }
 
         public Tuple<char, int> getLocation(Pawn p)
