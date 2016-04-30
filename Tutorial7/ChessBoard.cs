@@ -21,23 +21,40 @@ namespace Tutorial7
 
         public void movePiece(Tuple<char, int> from, Tuple<char, int> to)
         {
+            int forward1 = 1;
+            int forward2 = 2;
             Pawn pFrom;
-            // Move is not within one or two spaces
-            if (to.Item2 - from.Item2 > 2 || to.Item2 - from.Item2 < 1)
+            board.TryGetValue(from, out pFrom);
+            if (pFrom == null)
             {
                 return;
-            } else if (!from.Item1.Equals(to.Item1)) // Same column
+            } else if (pFrom.color.Equals("black"))
             {
-                if (Math.Abs((int)from.Item1 - (int)to.Item1) > 1){
+                forward1 = -1;
+                forward2 = -2;
+            } else // It is white
+            {
+                forward1 = 1;
+                forward2 = 2;
+            }
+
+            // Move is not within one or two spaces
+            if (to.Item2 - from.Item2 > forward2 || to.Item2 - from.Item2 < forward1)
+            {
+                return;
+            }
+            else if (!from.Item1.Equals(to.Item1)) // Same column
+            {
+                if (Math.Abs((int)from.Item1 - (int)to.Item1) > 1)
+                {
                     return;
-                } else if (to.Item2 - from.Item2 != 1)
+                }
+                else if (to.Item2 - from.Item2 != forward1)
                 {
                     return;
                 }
             }
 
-            board.TryGetValue(from, out pFrom);
-            
             board.Remove(from);
             board.Remove(to);
             board.Add(to, pFrom);

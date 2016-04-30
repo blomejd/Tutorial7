@@ -8,7 +8,7 @@ namespace Tutorial7
 {
     public class Pawn
     {
-        string color;
+        public string color;
         public bool pawnMoved;
         public Pawn(string color)
         {
